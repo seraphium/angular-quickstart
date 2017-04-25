@@ -1,14 +1,17 @@
 import { Component, AfterViewInit, ViewChild } from '@angular/core';
 import { CountDownTimerComponent} from './shared/index';
+import { User } from './shared/index';
 
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
 })
 export class AppComponent implements AfterViewInit{
 
   @ViewChild(CountDownTimerComponent)
   private timerComponent: CountDownTimerComponent;
+
+  private user: User = new User();
 
   seconds() {
     return 0;
