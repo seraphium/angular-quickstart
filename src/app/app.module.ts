@@ -8,6 +8,7 @@ import { CapitalizePipe } from './capitalize.pipe';
 import { SharedModule } from './shared/index';
 import { HomeComponent }from './home.component';
 import { ProfileComponent } from './profile.component';
+import  { UserService } from './shared/index';
 
 const rootRouting : ModuleWithProviders = RouterModule.forRoot([
   {
@@ -24,6 +25,7 @@ const rootRouting : ModuleWithProviders = RouterModule.forRoot([
   imports:      [ BrowserModule , SharedModule,rootRouting ],
   declarations: [ AppComponent, HeaderComponent, FooterComponent, CountDownTimerComponent, BoldHoverDirective,
                   CapitalizePipe, HomeComponent, ProfileComponent ],
+  providers:    [ UserService ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
