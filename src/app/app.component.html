@@ -1,7 +1,13 @@
 <layout-header [name]="name" (onNameChanged)="setName($event)"></layout-header>
-Nested Components
+<p boldHover>Nested Components</p>
 <button (click)='start()'>start</button>
 <button (click)='stop()'>stop</button>
 <div class="seconds">{{seconds()}}</div>
 <countdown-timer></countdown-timer>
+<ul>
+ <li *ngFor="let value of listValue">
+   {{value}}
+ </li>
+</ul>
+<input [(ngModel)] = "name"/>
 <layout-footer></layout-footer>
