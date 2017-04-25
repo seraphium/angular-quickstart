@@ -1,3 +1,6 @@
 <layout-header [name]="name" (onNameChanged)="setName($event)"></layout-header>
 Nested Components
+<button (click)='timer.start()'>start</button>
+<button (click)='timer.stop()'>stop</button>
+<countdown-timer  #timer></countdown-timer>
 <layout-footer></layout-footer>
